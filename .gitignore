@@ -1,0 +1,5 @@
+.idea/
+personal-dev-tool.iml
+node_modules/*
+package-lock.json
+dist/*.

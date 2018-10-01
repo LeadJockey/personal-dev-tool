@@ -6,7 +6,7 @@ const Freemarker = require('freemarker.js');
 const logger = require('morgan');
 const cors = require('cors');
 const fm = new Freemarker({
-  viewRoot:path.join(__dirname,'view'),
+  viewRoot:path.join(__dirname, 'view'),
   options:{}
 });
 
@@ -19,9 +19,9 @@ app.use(cors());
 
 app.get('/', (req, res) => res.json({ msg:'hello rest api' }));
 
-app.get('/free', (req, res) => {
-  fm.render('/index.ftl', {msg:'hit'}, (err, result, errout) => {
-    res.send(!!err ? errout + err : result);
+app.get('/freemarker', (req, res) =>{
+  fm.render('/index.ftl', { msg:'hit' }, (err, result, errout) =>{
+    res.send(!!err ? errout + err:result);
   });
 });
 
