@@ -8,7 +8,7 @@
     <title>freemarker test</title>
 </head>
 <body>
-<p style="color:red">${msg}</p>
+<h2 style="color:red">${msg}</h2>
 <#list 1..3 as x>
     <p style="background-color:orange">hello freemarker ${x}</p>
 </#list>
