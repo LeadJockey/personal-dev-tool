@@ -9,8 +9,13 @@
 </head>
 <body>
 <h2 style="color:red">${msg}</h2>
-<#list 1..3 as x>
+<#list 1..5 as x>
     <p style="background-color:orange">hello freemarker ${x}</p>
 </#list>
+<script src="/socket.io/socket.io.js" type="text/javascript" charset="utf-8"></script> <!-- 1 -->
+<script>
+    const socket = io();
+
+</script>
 </body>
 </html>
