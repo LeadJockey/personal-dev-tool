@@ -10,5 +10,6 @@
 <body>
    <strong>Hello ${name}!!</strong>
    <a href="/">HOME</a>
+   <a href="/user/logout">로그아웃</a>
 </body>
 </html>

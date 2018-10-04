@@ -26,6 +26,7 @@ app.use('/', require('./router'));
 app.use('/user', require('./router/user'));
 app.use('/work', require('./router/work'));
 app.use('*', (req, res) => res.status(404).json({ msg:'page not found' }));
+// app.use('*', require('./router/user'));
 
 io.on('connection', function(socket){
   console.log('a user connected');

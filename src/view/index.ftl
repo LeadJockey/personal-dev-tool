@@ -8,14 +8,14 @@
     <title>index</title>
 </head>
 <body>
-<p style="color:red">${msg}</p>
+<p>${msg}</p>
 <#if isLogin>
 <a href="/user/logout">로그아웃</a>
 <#else>
-<a href="/user/login">로그인</a>
+<a href="/user">로그인</a>
 </#if>
 
-<script src="/socket.io/socket.io.js" type="text/javascript" charset="utf-8"></script> <!-- 1 -->
+<script src="/socket.io/socket.io.js" type="text/javascript" charset="utf-8"></script>
 <script>
     const socket = io();
 </script>
