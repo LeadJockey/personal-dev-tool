@@ -1,0 +1,12 @@
+.wrap_tool{width:980px;margin:0 auto}
+.main_tool{overflow:hidden}
+.main_tool .cont_main{float:left;width:50%;height:600px;margin-top:100px;}
+.main_tool .cont_image{background-color:#ffcb00}
+.cont_image .cover_image{width:200px;height:200px;margin:200px auto}
+.cont_image .img_main{display:block}
+.main_tool .cont_info{background-color:#2b2b2b;text-align:center}
+.cont_info .tit_info{display:block;height:100px;padding-top:160px;font-size:52px;line-height:100px;}
+.cont_info .desc_info{height:40px;margin:0 50px;font-size:20px;line-height:40px;border-bottom:1px solid #ffcb00}
+.cont_info .btn_log{display:block;width:360px;height:80px;margin:100px auto;background-color:#324760;border:1px solid #a9b7c6;border-radius:20px;font-size:24px;line-height:80px}
+
+

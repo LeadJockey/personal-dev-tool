@@ -17,25 +17,29 @@ exports.loginForm = (req, res, next) =>{
     res.send(!!err ? errout + err:result);
   });
 };
-exports.signUpForm = (req, res, next)=>{
+exports.signUpForm = (req, res, next) =>{
   fm.render('/signUpForm.ftl', {}, (err, result, errout) =>{
     res.send(!!err ? errout + err:result);
   });
 };
-exports.signUp = (req, res, next)=>{
-  console.log(req.body.username, req.body.password);
-  console.log('sign in ',fakeDatabase.createUser(req.body.username, req.body.password));
+exports.signUp = (req, res, next) =>{
   if(fakeDatabase.createUser(req.body.username, req.body.password)){
     res.redirect('/');
   }else{
-    res.redirect('/user');
+    res.redirect('/user/login');
   }
 };
 exports.login = passport.authenticate('local', {
-  successRedirect:'/work',
-  failureRedirect:'/user?error=denied'
+  successRedirect:'/bridge',
+  failureRedirect:'/user/login?error=denied'
 });
 exports.logout = (req, res, next) =>{
   req.logout();
   res.redirect('/');
+};
+exports.userList = (req, res, next) =>{
+  const data = {userList:fakeDatabase.getUserList()};
+  fm.render('/userList.ftl', data, (err, result, errout) =>{
+    res.send(!!err ? errout + err:result);
+  });
 };

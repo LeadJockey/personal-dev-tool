@@ -31,3 +31,12 @@ exports.setup = () =>{
   });
   passport.use('local', new LocalStrategy(localStrategyConfig, userCheck));
 };
+
+exports.authenticate = (req, res, next) =>{
+  res.locals.login = req.isAuthenticated();
+  if(res.locals.login){
+    next();
+  }else{
+    res.redirect('/user/login');
+  }
+};
