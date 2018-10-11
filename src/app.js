@@ -26,7 +26,7 @@ app.use('/', require('./router'));
 app.use('/user', require('./router/user'));
 app.use('/bridge', config.passport.authenticate, require('./router/bridge'));
 app.use('/team', config.passport.authenticate, require('./router/team'));
-// app.use('/project', config.passport.authenticate, require('./router/project'));
+app.use('/service', config.passport.authenticate, require('./router/service'));
 app.use('*', (req, res) => res.status(404).json({ msg:'page not found' }));
 // app.use('*', require('./router/user'));
 

@@ -14,6 +14,7 @@
        <li><a href="/user/list">유저 리스트</a></li>
        <li><a href="/user/logout">로그아웃</a></li>
        <li><a href="/team/add">팀원추가하기</a></li>
+       <li><a href="/service">서비스 인덱스 가기</a></li>
    </ul>
 </body>
 </html>
